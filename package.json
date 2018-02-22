@@ -41,7 +41,7 @@
     "bindings": "1.1.0",
     "bluebird": "^2.9.27",
     "eventemitter2": ">=0.4.11",
-    "nan": "^2.2.0",
+    "nan": "2.8.0",
     "prebuild-install": "^2.3.0"
   },
   "devDependencies": {
