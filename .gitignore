@@ -11,3 +11,4 @@ prebuilds/
 
 # From `segfault-handler`
 stacktrace-*.log
+bin

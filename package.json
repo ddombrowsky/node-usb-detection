@@ -38,6 +38,7 @@
     "url": "https://raw.github.com/MadLittleMods/node-usb-detection/master/licence"
   },
   "dependencies": {
+    "babel-preset-env": "^1.6.1",
     "bindings": "1.1.0",
     "bluebird": "^2.9.27",
     "eventemitter2": ">=0.4.11",
