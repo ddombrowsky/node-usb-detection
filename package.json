@@ -50,6 +50,6 @@
     "chalk": "^1.0.0",
     "eslint": "^4.17.0",
     "jasmine": "^2.9.0",
-    "prebuild": "^6.2.2"
+    "prebuild": "^7.6.0"
   }
 }
