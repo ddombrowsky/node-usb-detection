@@ -5,7 +5,7 @@
   "main": "index.js",
   "gypfile": true,
   "scripts": {
-    "install": "c:\\cygwin\\bin\\sh.exe -c 'PATH=/bin:/cygdrive/c/Program\\ Files/nodejs/ /cygdrive/c/Users/davek/AppData/Roaming/npm/node-gyp rebuild'",
+    "install": "prebuild-install || node-gyp rebuild",
     "prepublishOnly": "npm run validate",
     "validate": "eslint **/*.js && npm test",
     "test": "jasmine ./test/test.js",
