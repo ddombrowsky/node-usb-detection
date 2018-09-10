@@ -1,6 +1,13 @@
 [![npm version](https://badge.fury.io/js/usb-detection.svg)](http://badge.fury.io/js/usb-detection) [![Gitter](https://badges.gitter.im/MadLittleMods/node-usb-detection.svg)](https://gitter.im/MadLittleMods/node-usb-detection?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 
+NOTE: this does not seem to build using gyp from npm.  No idea
+what the problem is.  You can build it manually with
+```
+$(npm bin)/node-gyp rebuild --target=1.8.2 --arch=ia32 --dist-url=https://atom.io/download/electron
+```
+
+
 # usb-detection
 
 `usb-detection` allows you to listen for insert/remove events of USB devices on your system.
