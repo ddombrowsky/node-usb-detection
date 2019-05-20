@@ -5,12 +5,12 @@
   "main": "index.js",
   "gypfile": true,
   "scripts": {
-    "install": "prebuild-install || node-gyp rebuild",
+    "install": "node-gyp rebuild --target=1.8.2 --dist-url=https://atom.io/download/electron",
     "prepublishOnly": "npm run validate",
     "validate": "eslint **/*.js && npm test",
     "test": "jasmine ./test/test.js",
     "prebuild": "prebuild --all --strip --verbose",
-    "rebuild": "node-gyp rebuild"
+    "rebuild": "node-gyp rebuild --target=1.8.2 --dist-url=https://atom.io/download/electron"
   },
   "repository": {
     "type": "git",
