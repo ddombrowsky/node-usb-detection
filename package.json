@@ -1,16 +1,18 @@
 {
   "name": "usb-detection",
-  "version": "2.2.1",
+  "version": "4.9.1",
   "description": "Listen to USB devices and detect changes on them.",
   "main": "index.js",
+  "types": "index.d.ts",
   "gypfile": true,
   "scripts": {
-    "install": "node-gyp rebuild --target=1.8.2 --dist-url=https://atom.io/download/electron",
+    "install": "prebuild-install || node-gyp rebuild",
     "prepublishOnly": "npm run validate",
-    "validate": "eslint **/*.js && npm test",
+    "lint": "eslint **/*.js",
+    "validate": "npm run lint && npm test",
     "test": "jasmine ./test/test.js",
     "prebuild": "prebuild --all --strip --verbose",
-    "rebuild": "node-gyp rebuild --target=1.8.2 --dist-url=https://atom.io/download/electron"
+    "rebuild": "node-gyp rebuild"
   },
   "repository": {
     "type": "git",
@@ -37,19 +39,21 @@
     "type": "MIT",
     "url": "https://raw.github.com/MadLittleMods/node-usb-detection/master/licence"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "dependencies": {
-    "babel-preset-env": "^1.6.1",
-    "bindings": "1.1.0",
-    "bluebird": "^2.9.27",
-    "eventemitter2": ">=0.4.11",
-    "nan": "2.8.0",
-    "prebuild-install": "^2.3.0"
+    "bindings": "^1.3.0",
+    "eventemitter2": "^5.0.1",
+    "nan": "^2.13.2",
+    "prebuild-install": "^5.3.3"
   },
   "devDependencies": {
-    "chai": "^3.0.0",
-    "chalk": "^1.0.0",
-    "eslint": "^4.17.0",
-    "jasmine": "^2.9.0",
-    "prebuild": "^7.6.0"
+    "chai": "^4.1.2",
+    "chalk": "^2.4.1",
+    "eslint": "^4.19.1",
+    "jasmine": "^3.1.0",
+    "node-gyp": "^6.1.0",
+    "prebuild": "^10.0.0"
   }
 }
