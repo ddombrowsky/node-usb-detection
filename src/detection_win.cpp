@@ -373,16 +373,6 @@ DWORD WINAPI ListenerThread( LPVOID lpParam ) {
 	return 0;
 }
 
-std::string ExtractSerialNumber(TCHAR* buf) {
-	CString str = buf;
-	int idx = str.ReverseFind(_T('\\'));
-
-	if (idx < 0) {
-		return "";
-	}
-
-	return std::string(str.Mid(idx + 1));
-}
 
 void BuildInitialDeviceList() {
 	DWORD dwFlag = (DIGCF_ALLCLASSES | DIGCF_PRESENT);
@@ -406,8 +396,6 @@ void BuildInitialDeviceList() {
 
 			DeviceItem_t* item = new DeviceItem_t();
 			item->deviceState = DeviceState_Connect;
-
-			item->deviceParams.serialNumber = ExtractSerialNumber(buf);
 
 			DWORD DataT;
 			DllSetupDiGetDeviceRegistryProperty(hDevInfo, pspDevInfoData, SPDRP_LOCATION_INFORMATION, &DataT, (PBYTE)buf, MAX_PATH, &nSize);
