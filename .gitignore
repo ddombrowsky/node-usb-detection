@@ -12,4 +12,4 @@ prebuilds/
 # From `segfault-handler`
 stacktrace-*.log
 bin
-usb-detection-2.2.0.tgz
+usb-detection-*.tgz
